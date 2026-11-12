@@ -5,6 +5,8 @@ from .email_service import enviar_correo_proveedor
 from pathlib import Path
 import json
 
+import traceback
+
 ruta_sucursal = Path(__file__)
 ruta_sucursal = ruta_sucursal.parents[2]
 
@@ -178,6 +180,7 @@ class dbCompra:
 
         except Exception as e:
             print("Error compra multiple:", e)
+            traceback.print_exc()
             con.rollback()
             return False, "Error en compra"
 

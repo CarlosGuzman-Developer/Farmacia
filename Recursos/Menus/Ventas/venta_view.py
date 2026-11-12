@@ -96,7 +96,7 @@ class VentaView(tk.Toplevel):
        try:
             self.client = genai.Client(api_key=Gemini_api)
        except:
-            messagebox.showinfo(master = ventana,title="Error, no API detectada",message="Error, no se ha detectado ninguna API valida para usar el chat con ia" \
+            messagebox.showinfo(parent = ventana,title="Error, no API detectada",message="Error, no se ha detectado ninguna API valida para usar el chat con ia" \
             "\nIntroduzca una en gemini_api.env\n" \
             "ubicacion: Recursos/Menus/Ventas")    
             ventana.destroy()

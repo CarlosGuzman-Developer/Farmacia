@@ -34,7 +34,7 @@ def generar_factura_venta(cliente, productos, total, descuento,sucursal):
 
     pdf.add_page()
 
-    pdf.image(ruta_logo,x = 0,y = 0, w = 50) 
+    pdf.image(str(ruta_logo),x = 0,y = 0, w = 50) 
 
     pdf.set_font(
         "Arial",
@@ -169,7 +169,7 @@ def generar_factura_compra(id,productos, total,sucursal):
 
     pdf.add_page()
 
-    pdf.image(ruta_logo,x = 0,y = 0, w = 50) 
+    pdf.image(str(ruta_logo),x = 0,y = 0, w = 50) 
 
     pdf.set_font(
         "Arial",
@@ -244,7 +244,7 @@ def generar_factura_compra(id,productos, total,sucursal):
 
     messagebox.showinfo(
         "Factura",
-        "Factura de compra generada"
+        "Factura de compra generada\nEspere al mensaje de confirmación de la compra..."
     )
 
     return nombre_archivo
