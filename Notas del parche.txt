@@ -1,0 +1,3 @@
+Versión 2.1:
+
+-Se añadió el archivo .env para poner las credenciales de gemini y hacer funcionar el chat con IA
